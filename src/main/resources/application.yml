@@ -1,0 +1,7 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost/user_service
+        username: szcze
+        password: szcze
+server:
+    port: 8080
