@@ -1,6 +1,6 @@
 spring:
     datasource:
-        url: jdbc:postgres://hgonnreaerhhkj:C6yRaOd-wB0tVEGPO2i2bWh75m@ec2-54-225-199-245.compute-1.amazonaws.com:5432/d5qgdsqtta2so0
+        url: postgres://hgonnreaerhhkj:C6yRaOd-wB0tVEGPO2i2bWh75m@ec2-54-225-199-245.compute-1.amazonaws.com:5432/d5qgdsqtta2so0
         username: hgonnreaerhhkj
         password: C6yRaOd-wB0tVEGPO2i2bWh75m
 server:
