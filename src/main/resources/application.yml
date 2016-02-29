@@ -1,9 +1,12 @@
 spring:
     datasource:
-        driverClassName: org.postgresql.Driver
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        driver-class-name: org.postgresql.Driver
         url: jdbc:postgres://hgonnreaerhhkj:C6yRaOd-wB0tVEGPO2i2bWh75m@ec2-54-225-199-245.compute-1.amazonaws.com:5432/d5qgdsqtta2so0
         username: hgonnreaerhhkj
         password: C6yRaOd-wB0tVEGPO2i2bWh75m
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
 server:
     port: 8080
