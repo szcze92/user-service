@@ -1,1 +1,1 @@
-web: java -jar target/*.jar
+web: java -Dserver.port=$PORT -jar  target/UserServiceProject-1.0-SNAPSHOT.jar
