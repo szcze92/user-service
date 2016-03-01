@@ -1,8 +1,8 @@
 spring:
     datasource:
-        driver-class-name: org.postgresql.Driver
         url: ${JDBC_DATABASE_URL}
-    jpa:
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
+    data:
+        rest:
+            base-path: /api
 server:
     port: 8080
