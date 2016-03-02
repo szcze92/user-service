@@ -1,11 +1,13 @@
 package pl.szcze.userserviceproject.controller;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMethod;
+import pl.szcze.userserviceproject.model.User;
 import pl.szcze.userserviceproject.repository.UserRepository;
 
 @RestController
@@ -17,8 +19,8 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<String> list() {
-        return new ResponseEntity<>("Siema", HttpStatus.OK);
+    public ResponseEntity<List<User>> list() {
+        return new ResponseEntity<>(userRepository.findAll(), HttpStatus.OK);
     }
 
 }

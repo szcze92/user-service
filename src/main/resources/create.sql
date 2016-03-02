@@ -1,13 +1,12 @@
-DROP TABLE user;
+DROP TABLE USERS;
 
-CREATE TABLE user
+CREATE TABLE USERS
 (
-id_user varchar(128) NOT NULL,
-login  varchar(50) NOT NULL,
-pass  varchar(50)  NOT NULL,
-first_name varchar(50) NOT NULL,
-last_name varchar(50) NOT NULL,
-adress varchar(50) NOT NULL,
-email varchar(50) NOT NULL,
-PRIMARY KEY (id_user)
+    id_user VARCHAR(128) PRIMARY KEY NOT NULL,
+    login  VARCHAR(50) NOT NULL,
+    pass  VARCHAR(50)  NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    adress VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL
 );
