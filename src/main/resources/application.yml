@@ -4,5 +4,3 @@ spring:
     data:
         rest:
             base-path: /api
-server:
-    port: 8080
