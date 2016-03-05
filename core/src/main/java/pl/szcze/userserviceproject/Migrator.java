@@ -10,6 +10,8 @@ public class Migrator {
         final String user = System.getenv("JDBC_DATABASE_USERNAME");
         final String password = System.getenv("JDBC_DATABASE_PASSWORD"); 
         
+        
+        
         Flyway flyway = new Flyway();
         flyway.setDataSource(url, user, password);
         flyway.migrate();
