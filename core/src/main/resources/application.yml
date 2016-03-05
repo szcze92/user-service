@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        url: ${JDBC_DATABASE_URL}
+    data:
+        rest:
+            base-path: /api
+server:
+    port: 8080

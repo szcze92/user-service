@@ -18,8 +18,9 @@ public class UserResource implements Serializable {
     private final String lastName;
     private final String adress;
     private final String email;
+    private final String version;
 
-    private UserResource(Integer id, String login, String password, String firstName, String lastName, String adress, String email) {
+    private UserResource(Integer id, String login, String password, String firstName, String lastName, String adress, String email, String version) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -27,6 +28,7 @@ public class UserResource implements Serializable {
         this.lastName = lastName;
         this.adress = adress;
         this.email = email;
+        this.version = version;
     }
 
     public Integer getId() {
@@ -57,6 +59,10 @@ public class UserResource implements Serializable {
         return email;
     }
 
+    public String getVersion() {
+        return version;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -67,6 +73,7 @@ public class UserResource implements Serializable {
         hash = 79 * hash + Objects.hashCode(this.lastName);
         hash = 79 * hash + Objects.hashCode(this.adress);
         hash = 79 * hash + Objects.hashCode(this.email);
+        hash = 79 * hash + Objects.hashCode(this.version);
         return hash;
     }
 
@@ -97,12 +104,15 @@ public class UserResource implements Serializable {
         if (!Objects.equals(this.email, other.email)) {
             return false;
         }
+        if (!Objects.equals(this.version, other.version)) {
+            return false;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", login=" + login + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", adress=" + adress + ", email=" + email + '}';
+        return "UserResource{" + "id=" + id + ", login=" + login + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", adress=" + adress + ", email=" + email + ", version=" + version + '}';
     }
 
     public static class Builder {
@@ -114,6 +124,7 @@ public class UserResource implements Serializable {
         private String lastName;
         private String adress;
         private String email;
+        private String version;
 
         public Builder withId(Integer id) {
             this.id = id;
@@ -150,8 +161,13 @@ public class UserResource implements Serializable {
             return this;
         }
 
+        public Builder withVersion(String version) {
+            this.version = version;
+            return this;
+        }
+
         public UserResource build() {
-            return new UserResource(id, login, password, firstName, lastName, adress, email);
+            return new UserResource(id, login, password, firstName, lastName, adress, email, version);
         }
 
     }
