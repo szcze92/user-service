@@ -1,0 +1,8 @@
+pl\szcze\userserviceproject\Migrator.class
+pl\szcze\userserviceproject\model\User.class
+pl\szcze\userserviceproject\repository\UserRepository.class
+pl\szcze\userserviceproject\Application.class
+pl\szcze\userserviceproject\resource\UserResource$1.class
+pl\szcze\userserviceproject\resource\UserResource$Builder.class
+pl\szcze\userserviceproject\controller\UserController.class
+pl\szcze\userserviceproject\resource\UserResource.class
