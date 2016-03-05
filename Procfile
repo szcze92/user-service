@@ -1,2 +1,2 @@
-migrate: java -cp /core/target/UserService-core-1.0-SNAPSHOT.jar:core/target/dependency/* pl.szcze.userserviceproject.Migrator
-web: java -Dserver.port=$PORT -jar  /core/target/UserService-core-1.0-SNAPSHOT.jar
+migrate: java -cp core/target/UserService-core-1.0-SNAPSHOT.jar:core/target/dependency/* pl.szcze.userserviceproject.Migrator
+web: java -Dserver.port=$PORT -jar  core/target/UserService-core-1.0-SNAPSHOT.jar
