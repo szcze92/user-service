@@ -1,0 +1,14 @@
+{
+  "name": "n3-line-chart",
+  "homepage": "https://github.com/n3-charts/line-chart",
+  "version": "2.0.3",
+  "_release": "2.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.3",
+    "commit": "d0e740788f5cd5682ce634d32a7dd48b1f4c10f0"
+  },
+  "_source": "git://github.com/n3-charts/line-chart.git",
+  "_target": "2.0.3",
+  "_originalSource": "n3-line-chart"
+}

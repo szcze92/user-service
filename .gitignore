@@ -7,7 +7,7 @@
 ######################
 /node/**
 /node_modules/**
-/bower_components/**
+/src/main/resources/public/bower_components/**
 /test-log/**
 
 ######################
