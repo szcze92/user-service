@@ -5,6 +5,8 @@ import java.util.Objects;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
@@ -23,6 +25,10 @@ public class User implements Serializable {
     @Id
     @Column(name = "id_user")
     private String id;
+
+    @Column(name = "role", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @Size(max = 50)
     @Column(name = "login")
@@ -48,12 +54,15 @@ public class User implements Serializable {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "active")
+    private boolean active;
+
     @Version
     @Column(name = "version")
     private Long version;
 
     public User() {
-        
+
     }
 
     public String getId() {
@@ -62,6 +71,14 @@ public class User implements Serializable {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public String getLogin() {
@@ -112,6 +129,14 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
     public Long getVersion() {
         return version;
     }
@@ -124,12 +149,14 @@ public class User implements Serializable {
     public int hashCode() {
         int hash = 7;
         hash = 97 * hash + Objects.hashCode(this.id);
+        hash = 97 * hash + Objects.hashCode(this.role);
         hash = 97 * hash + Objects.hashCode(this.login);
         hash = 97 * hash + Objects.hashCode(this.password);
         hash = 97 * hash + Objects.hashCode(this.firstName);
         hash = 97 * hash + Objects.hashCode(this.lastName);
         hash = 97 * hash + Objects.hashCode(this.adress);
         hash = 97 * hash + Objects.hashCode(this.email);
+        hash = 97 * hash + Objects.hashCode(this.active);
         hash = 97 * hash + Objects.hashCode(this.version);
         return hash;
     }
@@ -144,6 +171,9 @@ public class User implements Serializable {
         }
         final User other = (User) obj;
         if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        if (!Objects.equals(this.role, other.role)) {
             return false;
         }
         if (!Objects.equals(this.login, other.login)) {
@@ -164,6 +194,9 @@ public class User implements Serializable {
         if (!Objects.equals(this.email, other.email)) {
             return false;
         }
+        if (!Objects.equals(this.active, other.active)) {
+            return false;
+        }
         if (!Objects.equals(this.version, other.version)) {
             return false;
         }
@@ -172,7 +205,8 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", login=" + login + ", password=" + password + ", firstName=" + firstName + ", lastName=" + lastName + ", adress=" + adress + ", email=" + email + ", version=" + version + '}';
+        return "User{" + "id=" + id + ", role=" + role + ", login=" + login + ", firstName=" + firstName + ", lastName=" + lastName + ", adress=" + adress + ", email=" + email + ", active=" + active + ", version=" + version + '}';
     }
 
+    
 }
